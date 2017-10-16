@@ -2,6 +2,7 @@
 	<head>
 		<title>Events</title>
 		<meta name="Real Movie Reviews Events Page" content="Events Details">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
 		body  {
     		background-image: url("back.jpeg");
@@ -28,9 +29,41 @@
     		/*background-color: #555;*/
     		color: red;
 		}
+		span {
+			color: yellow;
+		}
+		.rating {
+		  unicode-bidi: bidi-override;
+		  direction: rtl;
+		}
+		.rating > span {
+		  display: inline-block;
+		  position: relative;
+		  width: 1.1em;
+		}
+		.rating > span:hover:before,
+		.rating > span:hover ~ span:before {
+		   content: "\2605";
+		   position: absolute;
+		}
+		.fa {
+		    font-size: 50px;
+		    cursor: pointer;
+		    user-select: none;
+		    color: red;
+		}
+
+		.fa:hover {
+		  color: white;
+		}
 		</style>
 	</head>
 	<body>
+	<script>
+		function myFunction(x) {
+    	x.classList.toggle("fa-thumbs-down");
+		}
+	</script>
 	<table>
   		<tr>
     		<th>
@@ -46,7 +79,7 @@
 			<td align="left">
 				<font color="white">DESCRIPTION: </font>	
 			</td>
-			<td align="left">
+			<td align="left" colspan="2">
 				<p style="font-family:courier;">
 				<font color="grey">
 				La La Land walked away from the Oscars with six wins — the 11th film to ever do so.
@@ -62,6 +95,27 @@
 			</td>
 			<td align="left">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/0pdqf4P9MB8" frameborder="0" allowfullscreen></iframe>
+			</td>
+			<td align="center">
+				<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+				<font color="white">REVIEWS: </font>
+			</td>
+			<td align="left" colspan="2">
+				<div class="rating">
+					<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+				<font color="white">USER COMMENTS: </font>
+			</td>
+			<td align="left" width="560">
+				<textarea id="commentsTextArea">Enter Comments here...</textarea>
 			</td>
 		</tr>
 	</table>

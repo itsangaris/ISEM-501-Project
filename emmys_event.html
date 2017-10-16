@@ -2,6 +2,7 @@
 	<head>
 		<title>Events</title>
 		<meta name="Real Movie Reviews Events Page" content="Events Details">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
 		body  {
     		background-image: url("back.jpeg");
@@ -9,11 +10,44 @@
 		table, th, td {
     		border: 1px solid grey;
     		margin: auto;
+    		table-layout: auto;
+		}
+		span {
+			color: yellow;
+		}
+		.rating {
+		  unicode-bidi: bidi-override;
+		  direction: rtl;
+		}
+		.rating > span {
+		  display: inline-block;
+		  position: relative;
+		  width: 1.1em;
+		}
+		.rating > span:hover:before,
+		.rating > span:hover ~ span:before {
+		   content: "\2605";
+		   position: absolute;
+		}
+		.fa {
+		    font-size: 50px;
+		    cursor: pointer;
+		    user-select: none;
+		    color: red;
+		}
+
+		.fa:hover {
+		  color: white;
 		}
 		</style>
 	</head>
 	<body>
-	<table>
+	<script>
+		function myFunction(x) {
+    	x.classList.toggle("fa-thumbs-down");
+		}
+	</script>
+	<table align="center">
   		<tr>
     		<th>
     			<img src="emmys.jpg">
@@ -23,12 +57,12 @@
 	</table>
 	<br>
 	<br>
-	<table align="left">
+	<table align="center">
 		<tr>
 			<td align="left">
 				<font color="white">DESCRIPTION: </font>	
 			</td>
-			<td align="left">
+			<td align="left" colspan="2">
 				<p style="font-family:courier;">
 				<font color="grey">
 				The 69th Annual Primetime Emmy Awards honored the best in U.S. prime time television programming from June 1, 2016 until May 31, 2017, as chosen by the Academy of Television Arts & Sciences. The ceremony was held on Sunday, September 17, 2017 at the Microsoft Theater in Downtown Los Angeles, California, and was broadcast in the U.S. by CBS. The ceremony was hosted by Stephen Colbert.[1] The 69th Primetime Creative Arts Emmy Awards were held on September 9 and 10, and was broadcast by FXX on September 16.
@@ -43,7 +77,29 @@
 			<td align="left">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/SwJlFIFXNRM" frameborder="0" allowfullscreen></iframe>
 			</td>
+			<td align="center">
+				<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+			</td>
 		</tr>
+		<tr>
+			<td align="left">
+				<font color="white">REVIEWS: </font>
+			</td>
+			<td align="left" colspan="2">
+				<div class="rating">
+					<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+				<font color="white">USER COMMENTS: </font>
+			</td>
+			<td align="left" width="560">
+				<textarea id="commentsTextArea">Enter Comments here...</textarea>
+			</td>
+		</tr>
+
 	</table>	
 	</body>
 </html>
