@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8" />
+<meta name="keywords" content= "movies, events, entertainment">
+      <title>Hot Movies | watch and review movie trends reviews and live events</title>
+
+
+      <style>
+
+      .dropbtn {
+          background-color: #black;
+          color: black;
+          padding: 20px;
+          font-size: 25px;
+          border: none;
+          cursor: pointer;
+      }
+
+      .dropbtn:hover, .dropbtn:focus {
+          background-color: #4295f4;
+      }
+
+      .dropdown {
+          position: relative;
+          display: inline-block;
+      }
+      body {
+        align-content: center;
+        width: 80%;
+        height: 80%;
+        margin: 0%;
+        background-image: url("back.jpeg");
+
+      }
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+    <!--  .images {
+        position: relative;
+        display: inline;
+      }-->
+
+      .dropdown a:hover {background-color: #f1f1f1}
+
+      .show {display:block;}
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+
+            }
+            #container {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            #inner {
+              width: 60%;
+              height: 40%;
+              margin: 0 auto;
+            }
+
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container" >
+
+            <div id="inner">
+              <div style="position: relative;display: inline-block; color: white;"><h2><b>Movie</b></h2><i>Trendz</i></div>
+              <p style=" color: white;">Trending Movies and Reviews.</p>
+
+
+              <div class="dropdown">
+              <button onclick="home()" class="dropbtn">HOME</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+              <div class="dropdown">
+              <button onclick="movies()" class="dropbtn">Movies</button>
+                <div id="Movies" class="dropdown-content">
+                  <a href="#home">Thor Ragnarok</a>
+                  <a href="#about">Iron Man 4 </a>
+                  <a href="#contact">Despicable me</a>
+                </div>
+              </div>
+              <div class="dropdown">
+              <button onclick="tvShows()" class="dropbtn">TvShows</button>
+                <div id="TvShows" class="dropdown-content">
+                  <a href="#GOT">Game of Thrones</a>
+                  <a href="#BBT">Big Bang Theory</a>
+                  <a href="#SN">Super Natural</a>
+                </div>
+              </div>
+              <div class="dropdown">
+              <button onclick="events()" class="dropbtn">Events</button>
+                <div id="Events" class="dropdown-content">
+                  <a href="events.html">Oscars</a>
+                  <a href="emmys_event.html">Emmys</a>
+                  <a href="#FilmFare">Filmfare</a>
+                </div>
+              </div>
+              <div class="dropdown">
+              <button onclick="contact()" class="dropbtn">ContactUs</button>
+                <div id="Contactus" class="dropdown-content">
+                  <a href="#kiran">Kiran Jonnalagadda</a>
+                  <a href="#someone">####### </a>
+                  <a href="#something">XXxXXXX</a>
+                </div>
+
+              <script>
+              /* When the user clicks on the button,
+              toggle between hiding and showing the dropdown content */
+              function home() {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+
+                  document.getElementById("myDropdown").classList.toggle("show");
+
+
+              }
+              function movies() {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+
+
+                  document.getElementById("Movies").classList.toggle("show");
+
+              }
+              function tvShows() {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+
+                  document.getElementById("TvShows").classList.toggle("show");
+              }
+              function events() {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+                  document.getElementById("Events").classList.toggle("show");
+
+              }
+              function contact() {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+                  document.getElementById("Contactus").classList.toggle("show");
+              }
+
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+
+              </script>
+            </div>
+            <div  id="sider" class="sideload" style="position: absolute; width: 51%; display: block">
+              <marquee style="color: white; font-family:courier">Movie reviews</marquee>
+    <marquee direction = "right" style="color: white; font-family: courier">Movies and events and all sorts of entertainment</marquee>
+
+
+  </div>
+
+
+</div>
+        <div class="inner" id="slide" style="width: 60%; height: 40%;">
+          <div class="images" >
+          <marquee direction = "right"><div style="display: inline-block;"><a href="#####3"><figure/><img class="mySlides" src="thor.jpeg" style="width: 200px; height: 250px;"/></a></div>
+            <div style="display: inline-block;"><a href="#####4"> <figure/> <img class="mySlides" src="dpme.jpg" style="width: 200px; height: 250px;"/></a></div><div style="display: inline-block;"><a href="#####5">  <figure/><img class="mySlides" src="ironman.jpg" style="width: 200px; height: 250px;"/></a></div></marquee>
+        </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+    </body>
+    <footer><center>@All copyrights reserved to <b>kiran jonnalagadda</center></footer>
+</html>
