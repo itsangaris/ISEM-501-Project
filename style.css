@@ -1,0 +1,23 @@
+body {
+		padding: 50px 100px;
+		font-size: 13px;
+		font-style: Verdana, Tahoma;
+		background-image: url("back.jpeg");
+		}
+h2	{
+	margin-bottom: 20px;
+	color: #ffffff 
+	
+	}
+	
+input, textarea {
+	padding: 10px;
+	border: 1px solid #ESESES;
+	width: 200px;
+	
+	
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus,
+}
